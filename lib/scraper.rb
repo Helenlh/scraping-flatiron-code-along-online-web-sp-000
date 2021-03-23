@@ -15,13 +15,9 @@ class Scraper
     courses_offerings = get_page.css(".post")
   end 
   
-<<<<<<< HEAD
+
   def make_courses 
-=======
-  def 
-    binding.pry 
->>>>>>> 6945964ace120210841d8bf790c31263a906a2d4
-   get_courses.each do |post|
+     get_courses.each do |post|
      course = Course.new
     course.title = post.css("h2").text
     course.schedule = post.css(".date").text
